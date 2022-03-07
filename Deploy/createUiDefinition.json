@@ -426,6 +426,46 @@
 								}
 							],
 							"visible": true
+						},
+						{
+                            "name": "databricksSettingsSection",
+                            "type": "Microsoft.Common.Section",
+                            "label": "Databricks Settings",
+                            "elements": [
+                                {
+                                    "name": "databricksSection",
+                                    "type": "Microsoft.Common.TextBlock",
+                                    "visible": true,
+                                    "options": {
+                                        "text": "Please configure your Databricks workspace.",
+                                        "link": {
+                                            "label": "Learn more",
+                                            "uri": "https://github.com/Azure/azure-synapse-analytics-end2end"
+                                        }
+                                    }
+                                },
+								{
+									"name": "ctrlDeployDatabricks",
+									"type": "Microsoft.Common.OptionsGroup",
+									"label": "Deploy Databricks",
+									"defaultValue": "Yes (recommended)",
+									"toolTip": "",
+									"constraints": {
+										"allowedValues": [
+										{
+											"label": "Yes (recommended)",
+											"value": "Yes"
+										},
+										{
+											"label": "No",
+											"value": "No"
+										}
+										],
+										"required": true
+									},
+									"visible": true
+								}
+							]
 						}
 					]
 				},
@@ -521,20 +561,6 @@
 						}
 						
 						
-					]
-				},
-				{
-					"name": "Databricks",
-					"label": "Databricks",
-					"elements": [
-						{
-							"name": "tagsByResource",
-							"type": "Microsoft.Common.TagsByResource",
-							"resources": [
-								"Microsoft.Storage/storageAccounts",
-								"Microsoft.Compute/virtualMachines"
-							]
-						}
 					]
 				},
 				{
